@@ -10,7 +10,7 @@ const todoReducer = (state=initState, action)=>{
             // adding new entry in dict format: id, text, status
             const todo = {id:uuidv4(), text:action.payload, done: false}
             return {todoList:[...state.todoList, todo]} //... = decompose item
-        case 'updateStatus':
+        case 'todo/updateStatus':
             // set done case
             const newList = state.todoList.map(item=>{
                 if (item.id === action.payload){
@@ -19,6 +19,11 @@ const todoReducer = (state=initState, action)=>{
                 return item
             })
             return {todoList: newList}
+        case 'todo/delete':
+            const filteredList = state.todoList.filter(item=>{
+                return item.id !== action.payload
+            })
+            return {todoList: filteredList}
         default:
             return state
     }

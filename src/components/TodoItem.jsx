@@ -7,14 +7,19 @@ const TodoItem = ({todo}) => {
     const dispatch = useDispatch()
 
     const updateStatus = () => {
-        dispatch({type: 'updateStatus', payload:todo.id})
+        dispatch({type: 'todo/updateStatus', payload:todo.id})
+    }
+
+    const deleteTodo = () => {
+        dispatch({type: 'todo/delete', payload:todo.id})
     }
 
     return (
         <div className='box'>
             <span onClick={updateStatus}>{text}</span>
+            <button onClick={deleteTodo}>X</button>
         </div>
     )
 }
 
-export default TodoItem;    
+export default TodoItem;
