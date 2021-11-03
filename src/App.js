@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 import './App.css';
 import todoReducer from './reducers/todoReducer';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import { Route } from 'react-router';
 import HelpPage from './components/HelpPage';
 import { Switch } from 'react-router';

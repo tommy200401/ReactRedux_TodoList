@@ -1,33 +1,40 @@
 import { useState } from 'react';
 import { Modal, Button } from 'antd';
 import { EditOutlined } from '@ant-design/icons';
+import { Input } from 'antd';
+import { useDispatch } from 'react-redux';
+import { updateTodo } from '../apis/todos';
 
-const EditTodoBox = () => {
+const EditTodoBox = ({ todo }) => {
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const [updatedText, setUpdatedText] = useState("")
+    const dispatch = useDispatch();
+
+    // show box
     const showModal = () => {
-      setIsModalVisible(true);
+        setIsModalVisible(true);
     };
-  
+
+    // when click ok
     const handleOk = () => {
-      setIsModalVisible(false);
+        updateTodo({ id: todo.id, text: updatedText, done: todo.done })     // unchange id and status
+            .then(response => (dispatch({ type: 'todo/updateStatus', payload: response.data })))
+        setIsModalVisible(false);
     };
-  
+
+    // when click cancel
     const handleCancel = () => {
-      setIsModalVisible(false);
+        setIsModalVisible(false);
     };
-  
+
     return (
-      <>
-        <Button icon={<EditOutlined/>} onClick={showModal}>
-          Open Modal
-        </Button>
-        <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-        </Modal>
-      </>
+        <>
+            <Button icon={<EditOutlined />} onClick={showModal}></Button>
+            <Modal title="Edit your todo item here:" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+                <Input placeholder='e.g. Finish parking boy exercise' onChange={event => setUpdatedText(event.target.value)}></Input>
+            </Modal>
+        </>
     );
-  };
+};
 
 export default EditTodoBox;

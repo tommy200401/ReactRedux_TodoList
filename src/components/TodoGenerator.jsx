@@ -10,16 +10,16 @@ const TodoGenerator = () => {
     const dispatch = useDispatch()
 
     const addTodo = () => {
-        createTodo({text, done:false})
-        .then(response=>dispatch({type:'todo/add', payload: response.data}))     // response: include other stuff, need to get [data] out
+        createTodo({ text, done: false })                                           // set parameter: text = input text, done default false
+            .then(response => dispatch({ type: 'todo/add', payload: response.data }))     // response: include other stuff, need to get [data] out
     }
 
     return (
-        //Update on action: add text on click
-    <div>
-        <input onChange={event=>setText(event.target.value)}defaultValue={text}></input>
-        <Button type="primary" onClick={addTodo}>ADD</Button>
-    </div>)
+        //Update on action: add text on click with 'setter'
+        <div>
+            <input onChange={event => setText(event.target.value)} defaultValue={text}></input>
+            <Button type="primary" onClick={addTodo}>ADD</Button>
+        </div>)
 }
 
 export default TodoGenerator;

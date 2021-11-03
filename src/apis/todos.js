@@ -9,10 +9,10 @@ export const createTodo = (todo) => {
 }
 
 export const updateTodo = (todo) => {
-    return api.put(`/todos/${todo.id}`, todo)
+    return api.put(`/todos/${String(todo.id)}`, todo)
 }
 
 // Input is only id, not whole item
 export const deleteTodo = (id) => {
-    return api.delete(`/todos/${id}`)
+    return api.delete(`/todos/${String(id)}`)
 }

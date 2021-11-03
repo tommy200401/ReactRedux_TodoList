@@ -8,9 +8,9 @@ import { useDispatch } from "react-redux"
 const TodoList = () => {
     const dispatch = useDispatch();
 
-    useEffect(()=>{
-        getAllTodos().then(response=>
-            dispatch({type:'todo/init', payload: response.data}))
+    useEffect(() => {
+        getAllTodos().then(response =>
+            dispatch({ type: 'todo/init', payload: response.data }))
     })
 
     return (
