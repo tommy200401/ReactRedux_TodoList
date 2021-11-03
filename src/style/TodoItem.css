@@ -6,3 +6,11 @@
     border: 1px solid grey;
     margin: 10px 0px;
 }
+
+.done{
+    text-decoration-line: line-through;
+}
+
+.notDone{
+    text-decoration-line: none;
+}

@@ -1,9 +1,13 @@
 import '../style/TodoItem.css'
 import { useDispatch } from "react-redux";
+import classNames from 'classnames';
 
 
 const TodoItem = ({todo}) => {
-    const text = (todo.done)?<del>{todo.text}</del>:todo.text;
+    // const text = (todo.done)?<del>{todo.text}</del>:todo.text;
+
+    let textClass = classNames({done: todo.done, notDone: false})
+    
     const dispatch = useDispatch()
 
     const updateStatus = () => {
@@ -16,8 +20,8 @@ const TodoItem = ({todo}) => {
 
     return (
         <div className='box'>
-            <span onClick={updateStatus}>{text}</span>
-            <button onClick={deleteTodo}>X</button>
+            <span className={textClass} onClick={updateStatus}>{todo.text}</span>
+            <button className="delete" onClick={deleteTodo}>X</button>
         </div>
     )
 }
