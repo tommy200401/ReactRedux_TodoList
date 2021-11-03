@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-03T16:45:51.072Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="YcNXQFW5IIswOXvPwBAR" version="15.6.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-11-03T16:47:03.822Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="mCogtA8yWXJxJw0Us-z-" version="15.6.8" type="github" pages="3">
   <diagram id="3nTNWFw7tpS-CEgfZ3Sg" name="IPM">
     <mxGraphModel dx="3080" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -339,6 +339,9 @@
         <mxCell id="l3-crQbEkly2zokMglFH-13" value="Walkthrough acceptance criteria" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="gqvWZeqBpua2WVSqor7W-1">
           <mxGeometry x="900" y="490" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="Zh8_GDqivFzKMPfvCWQZ-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="gqvWZeqBpua2WVSqor7W-1" source="l3-crQbEkly2zokMglFH-15" target="Zh8_GDqivFzKMPfvCWQZ-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="l3-crQbEkly2zokMglFH-15" value="Raise any concern/questions by any parties" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="gqvWZeqBpua2WVSqor7W-1">
           <mxGeometry x="900" y="580" width="120" height="60" as="geometry" />
         </mxCell>
@@ -348,6 +351,23 @@
         <mxCell id="l3-crQbEkly2zokMglFH-17" value="Prepare a set of questions beforehand" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="gqvWZeqBpua2WVSqor7W-1">
           <mxGeometry x="1170" y="580" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="Zh8_GDqivFzKMPfvCWQZ-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;" edge="1" parent="gqvWZeqBpua2WVSqor7W-1" source="Zh8_GDqivFzKMPfvCWQZ-0" target="Zh8_GDqivFzKMPfvCWQZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Zh8_GDqivFzKMPfvCWQZ-0" value="Resolve problems/ misunderstanding during meeting" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="gqvWZeqBpua2WVSqor7W-1">
+          <mxGeometry x="900" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Zh8_GDqivFzKMPfvCWQZ-2" value="Development based on story after meeting" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="gqvWZeqBpua2WVSqor7W-1">
+          <mxGeometry x="900" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="oTcHMYkagrCZJTezGUeH" name="Page-3">
+    <mxGraphModel dx="1426" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="fHtJMfYCMKSVpNyA0h1i-0" />
+        <mxCell id="fHtJMfYCMKSVpNyA0h1i-1" parent="fHtJMfYCMKSVpNyA0h1i-0" />
       </root>
     </mxGraphModel>
   </diagram>
