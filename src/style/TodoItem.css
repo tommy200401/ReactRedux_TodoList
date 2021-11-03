@@ -2,6 +2,10 @@
     float: right;
 }
 
+.edit{
+    float: right;
+}
+
 .box{
     border: 1px solid grey;
     margin: 10px 0px;
