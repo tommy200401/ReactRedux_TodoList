@@ -21,11 +21,12 @@ const TodoItem = ({ todo }) => {
             .then(() => (dispatch({ type: 'todo/delete', payload: todo.id })));
     }
 
+    // pass down todo to editbox!!!
     return (
         <div className='box'>
             <span className={textClass} onClick={updateStatus}>{todo.text}</span>
             <Button type="text" icon={<CloseOutlined style={{ color: 'grey' }} />} className="delete" onClick={deleteTodoItem}></Button>
-            <EditTodoBox></EditTodoBox>
+            <EditTodoBox key={todo.id} todo={todo}></EditTodoBox>
         </div>
     )
 }

@@ -7,9 +7,9 @@ import { updateTodo } from '../apis/todos';
 
 const EditTodoBox = ({ todo }) => {
     const [isModalVisible, setIsModalVisible] = useState(false);
-    const [updatedText, setUpdatedText] = useState("")
+    const [text, setText] = useState("")
     const dispatch = useDispatch();
-
+    
     // show box
     const showModal = () => {
         setIsModalVisible(true);
@@ -17,8 +17,8 @@ const EditTodoBox = ({ todo }) => {
 
     // when click ok
     const handleOk = () => {
-        updateTodo({ id: todo.id, text: updatedText, done: todo.done })     // unchange id and status
-            .then(response => (dispatch({ type: 'todo/updateStatus', payload: response.data })))
+        updateTodo({ id: todo.id, text, done: todo.done })     // unchange id and status
+            .then(response => (dispatch({ type: 'todo/updateStatus', payload: response.data })));
         setIsModalVisible(false);
     };
 
@@ -31,7 +31,7 @@ const EditTodoBox = ({ todo }) => {
         <>
             <Button icon={<EditOutlined />} onClick={showModal}></Button>
             <Modal title="Edit your todo item here:" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                <Input placeholder='e.g. Finish parking boy exercise' onChange={event => setUpdatedText(event.target.value)}></Input>
+                <Input placeholder='e.g. Finish parking boy exercise' onChange={event => setText(event.target.value)}></Input>
             </Modal>
         </>
     );
