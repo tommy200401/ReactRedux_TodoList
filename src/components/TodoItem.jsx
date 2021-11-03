@@ -25,6 +25,7 @@ const TodoItem = ({todo}) => {
         <div className='box'>
             <span className={textClass} onClick={updateStatus}>{todo.text}</span>
             <Button type="text" icon={<CloseOutlined style={{color: 'grey'}}/>} className="delete" onClick={deleteTodoItem}></Button>
+            <EditTodoBox></EditTodoBox>
             <Button type="text" icon={<EditOutlined/>} className="edit" onClick={EditTodoBox}></Button>
         </div>
     )
