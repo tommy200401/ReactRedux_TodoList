@@ -14,7 +14,7 @@ const TodoList = () => {
     })
 
     return (
-        <div className='todo'>
+        <div className='topbar'>
             <TodoGenerator></TodoGenerator>
             <TodoGroup></TodoGroup>
         </div>

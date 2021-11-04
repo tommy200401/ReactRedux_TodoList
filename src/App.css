@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #f2ffcc;
 }
 
 .App-logo {
@@ -40,4 +41,11 @@
 
 .link{
   border-left: solid black 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.pageHeader{
+  background-color: yellow;
 }
