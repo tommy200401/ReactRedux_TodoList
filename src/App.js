@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom';
 import TodoList from './components/TodoList';
 import DoneTodoList from './components/DoneTodoList'
 import NotFoundPage from './components/NotFoundPage';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import {Layout} from 'antd';
 import {PageHeader, Descriptions} from 'antd';
 
-const { Header, Content, Footer } = Layout;
+const {Footer } = Layout;
 
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
         
       </Descriptions>
     </PageHeader>
+
         <Link to='/'>Home </Link>
         <Link className='link' to='help'> Help </Link>
         <Link className='link' to='done'> Finished Todo </Link>

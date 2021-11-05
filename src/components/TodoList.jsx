@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux"
 const TodoList = () => {
     const dispatch = useDispatch();
 
+    // initial get all data from database(api) and put to store
     useEffect(() => {
         getAllTodos().then(response =>
             dispatch({ type: 'todo/init', payload: response.data }))

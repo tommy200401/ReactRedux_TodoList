@@ -3,6 +3,7 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 const { Header, Content, Footer } = Layout;
 
 const HeaderBar = () => {
+    // Todo: replace Menu.item text to link
     return (
     <Layout>
         <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
